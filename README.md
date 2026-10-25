@@ -18,13 +18,18 @@
 
 ## 📌 Overview
 
-Simulate evasion TECHNIQUE INDICATORS to validate
+OEvade simulates EDR evasion technique indicators so blue teams can validate behavioural detections. It is non-destructive and distinct from OCymulate (C2 BAS) and related OwlSec purple-team tools. Default targeting stays local/safe, with explicit opt-ins for live simulation and external hosts.
 
 ---
 
 ## ✨ Features
 
-- Purple-team EDR evasion technique simulator for detection testing — distinct from OCymulate C2 BAS and OChain host-propagation
+- Catalogue of evasion technique indicators runnable by key
+- List mode to inventory available techniques
+- Dry-run versus live-sim controls for detection drills
+- Beacon host/port/count and sleep-masking duration parameters
+- Text/JSON reports and optional detection gap reporting
+- Unsafe-external gate for authorised off-box simulation
 
 ---
 
@@ -38,7 +43,10 @@ Simulate evasion TECHNIQUE INDICATORS to validate
 ## 🚀 Usage
 
 ```bash
-./OEvade
+./OEvade --list
+./OEvade --run 1 --dry-run
+./OEvade --run A --host 127.0.0.1 --port 4444 --count 3 --json
+./OEvade --help
 ```
 
 ---
